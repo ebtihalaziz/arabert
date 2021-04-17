@@ -27,7 +27,7 @@ SEGMENTED_MODELS = [
 ]
 
 
-class ArabertPreprocessor:
+class ArbertmoPreprocessor:
     """
     A Preprocessor class that cleans and preprocesses text for all models in the AraBERT repo.
     It also can unprocess the text ouput of the generated text
