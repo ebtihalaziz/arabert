@@ -22,6 +22,7 @@ ACCEPTED_MODELS = [
 ]
 
 SEGMENTED_MODELS = [
+    "Ebtihal/AraDiaBERTo_V2"
     "bert-base-arabert",
     "bert-base-arabertv2",
     "bert-large-arabertv2",
@@ -37,6 +38,7 @@ class ArabertPreprocessor:
 
         model_name (:obj:`str`): model name from the HuggingFace Models page without the aubmindlab tag. Defaults to "bert-base-arabertv02". Current accepted models are:
 
+            - :obj:`"Ebtihal/AraDiaBERTo_V2"`: No farasa segmentation. 
             - :obj:`"bert-base-arabertv01"`: No farasa segmentation.
             - :obj:`"bert-base-arabert"`: with farasa segmentation.
             - :obj:`"bert-base-arabertv02"`: No farasas egmentation.
@@ -93,6 +95,7 @@ class ArabertPreprocessor:
         """
         model_name (:obj:`str`): model name from the HuggingFace Models page without the aubmindlab tag. Defaults to "bert-base-arabertv02". Current accepted models are:
 
+            - :obj:`"Ebtihal/AraDiaBERTo_V2"`: No farasa segmentation. 
             - :obj:`"bert-base-arabertv01"`: No farasa segmentation.
             - :obj:`"bert-base-arabert"`: with farasa segmentation.
             - :obj:`"bert-base-arabertv02"`: No farasas egmentation.
@@ -128,7 +131,7 @@ class ArabertPreprocessor:
             logging.warning(
                 "Model provided is not in the accepted model list. Assuming you don't want Farasa Segmentation"
             )
-            self.model_name = "bert-base-arabertv02"
+            self.model_name = "Ebtihal/AraDiaBERTo_V2"
         else:
             self.model_name = model_name
 
