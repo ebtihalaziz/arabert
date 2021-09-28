@@ -5,6 +5,7 @@ import re
 import pyarabic.araby as araby
 
 ACCEPTED_MODELS = [
+    "Ebtihal/AraDiaBERTo_V2"
     "bert-base-arabertv01",
     "bert-base-arabert",
     "bert-base-arabertv02",
